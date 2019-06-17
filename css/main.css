@@ -1,0 +1,243 @@
+/* latin */
+@import url("https://fonts.googleapis.com/css?family=Inika:400,700|Zilla+Slab:400,700&display=swap");
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Montserrat Italic"), local("Montserrat-Italic"), url(https://fonts.gstatic.com/s/montserrat/v13/JTUQjIg1_i6t8kCHKm459WxRyS7m.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Montserrat Bold Italic"), local("Montserrat-BoldItalic"), url(https://fonts.gstatic.com/s/montserrat/v13/JTUPjIg1_i6t8kCHKm459WxZcgvz_PZw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url(https://fonts.gstatic.com/s/montserrat/v13/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+html body {
+  padding: 0;
+  margin: 0;
+}
+html body header {
+  font-family: "Inika", sans-serif;
+}
+html body header nav {
+  position: fixed;
+  margin: auto;
+  height: 130px;
+  width: 650px;
+  top: 1em;
+  right: 0;
+  left: 0;
+}
+html body header nav .panel {
+  float: left;
+  height: 130px;
+  width: 130px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+html body header nav .panel .front, html body header nav .panel .back {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body header nav .panel .back {
+  position: relative;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  bottom: 130px;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+html body header nav .panel .back a {
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+html body header nav .panel .front {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+html body header nav .panel .front .fas {
+  color: white;
+  font-size: 60px;
+}
+html body header nav .panel:hover {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -moz-backface-visibility: hidden;
+}
+html body header nav .home {
+  background: yellow;
+}
+html body header nav .code {
+  background: #2fb5ff;
+  visibility: hidden;
+}
+html body header nav .photo {
+  background: #00ff6d;
+}
+html body header nav .about {
+  background: #8e8b90;
+}
+html body header h1 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 45px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url("https://i2.wp.com/ksusentinel.com/wp-content/uploads/2016/02/20445410520_97a11633c7_o.jpg?w=4000");
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin: 0;
+}
+html body .projects {
+  height: 300vh;
+  display: flex;
+}
+html body .projects .title {
+  width: 30%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: "Inika", sans-serif;
+  margin: 0 !important;
+  background: #2c2c2c;
+}
+html body .projects .title h2 {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: white;
+}
+html body .projects .pages {
+  width: 70%;
+}
+html body .projects .pages div {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+html body .projects .pages div p {
+  width: 80%;
+  font-size: 18px;
+  line-height: 30px;
+}
+html body .projects .pages div:nth-child(1) {
+  background-color: #388659;
+}
+html body .projects .pages div:nth-child(2) {
+  background-color: #812a6e;
+}
+html body .projects .pages div:nth-child(3) {
+  background-color: #1f586b;
+}
+html body footer {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: aqua;
+}
+
+@media only screen and (min-width: 840px) {
+  html body .projects {
+    height: 300vh;
+    display: flex;
+  }
+  html body .projects .title {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 30px;
+    font-family: "Inika", sans-serif;
+    margin: 0 !important;
+    z-index: -10;
+  }
+  html body .projects .title h2 {
+    writing-mode: unset;
+  }
+  html body .projects .pages {
+    width: 50%;
+    flex-grow: 1;
+  }
+  html body .projects .pages div {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+  }
+  html body .projects .pages div p {
+    width: 80%;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  html body .projects .pages div:nth-child(1) {
+    background-color: #388659;
+  }
+  html body .projects .pages div:nth-child(2) {
+    background-color: #812a6e;
+  }
+  html body .projects .pages div:nth-child(3) {
+    background-color: #1f586b;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
