@@ -55,12 +55,13 @@ html {
         width: 650px;
         top: 1em;
         right: 0;
-        left: 0;
+        left: 1em;
+        z-index: 20;
 
         .panel {
           float: left;
           height: 130px;
-          width: 130px;
+          width: 90px;
           -webkit-transform-style: preserve-3d;
           -moz-transform-style: preserve-3d;
           -ms-transform-style: preserve-3d;
@@ -72,6 +73,10 @@ html {
             display: flex;
             justify-content: center;
             align-items: center;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
           }
 
           .back {
@@ -83,10 +88,6 @@ html {
             transform: rotateX(180deg);
             bottom: 130px;
             text-align: center;
-            -webkit-backface-visibility: hidden;
-            -moz-backface-visibility: hidden;
-            -ms-backface-visibility: hidden;
-            backface-visibility: hidden;
 
             a {
               text-transform: uppercase;
@@ -98,11 +99,6 @@ html {
           }
 
           .front {
-            -webkit-backface-visibility: hidden;
-            -moz-backface-visibility: hidden;
-            -ms-backface-visibility: hidden;
-            backface-visibility: hidden;
-
             .fas {
               color: white;
               font-size: 60px;
@@ -130,7 +126,7 @@ html {
 
         .code {
           background: rgba(47, 181, 255, 1);
-          visibility: hidden;
+          color: white;
         }
 
         .photo {
@@ -141,23 +137,35 @@ html {
           background: rgba(142, 139, 144, 1);
         }
       }
-
-      h1 {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-size: 45px;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('https://i2.wp.com/ksusentinel.com/wp-content/uploads/2016/02/20445410520_97a11633c7_o.jpg?w=4000');
-        -webkit-background-size: cover;
-        background-size: cover;
-        margin: 0;
+      .heading {
+        h1 {
+          height: 100vh;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          padding-left: 20vw;
+          color: white;
+          font-size: 45px;
+          background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('https://i2.wp.com/ksusentinel.com/wp-content/uploads/2016/02/20445410520_97a11633c7_o.jpg?w=4000');
+          -webkit-background-size: cover;
+          background-size: cover;
+          margin: 0;
+        }
       }
     }
-
+    .courses {
+      height: 400vh;
+      .title {
+        background: rgb(12,12,44);
+      }
+    }
     .projects {
       height: 300vh;
+      .title {
+        background: rgb(44,44,44);
+      }
+    }
+    .container{
       display: flex;
 
       .title {
@@ -169,7 +177,8 @@ html {
         font-size: 30px;
         font-family: 'Inika', sans-serif;
         margin: 0!important;
-        background: rgb(44,44,44);
+        z-index: -10;
+
         h2 {
           writing-mode: vertical-rl;
           text-orientation: upright;
@@ -204,6 +213,9 @@ html {
         div:nth-child(3) {
           background-color: rgb(31,88,107);
         }
+        div:nth-child(4) {
+          background-color: rgb(44,44,107);
+        }
       }
     }
 
@@ -212,7 +224,8 @@ html {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      background-color: aqua;
+      background-color: #0affa5;
+      font-size: 30px;
     }
   }
 }
@@ -220,22 +233,23 @@ html {
 @media only screen and (min-width: 840px) {
   html {
     body {
+      header {
+        nav {
+          .panel {
+            width: 130px;
+          }
+          .code {
+            width: 260px;
+            font-size: 40px;
+          }
+        }
+      }
 
-      .projects {
-        height: 300vh;
-        display: flex;
+      .container {
 
         .title {
           width: 50%;
-          height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
           flex-grow: 1;
-          font-size: 30px;
-          font-family: 'Inika', sans-serif;
-          margin: 0!important;
-          z-index: -10;
           h2 {
             writing-mode: unset;
           }
@@ -244,31 +258,6 @@ html {
         .pages {
           width: 50%;
           flex-grow: 1;
-
-          div {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            color: white;
-
-            p {
-              width: 80%;
-              font-size: 18px;
-              line-height: 30px;
-            }
-
-          }
-          div:nth-child(1) {
-            background-color: rgb(56,134,89);
-          }
-          div:nth-child(2) {
-            background-color: rgb(129,42,110);
-          }
-          div:nth-child(3) {
-            background-color: rgb(31,88,107);
-          }
         }
       }
     }
