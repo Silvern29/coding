@@ -121,20 +121,20 @@ html {
         }
 
         .home {
-          background: yellow;
+          background: radial-gradient(circle at bottom right, rgba(0,0,0,0.8), rgba(169, 169, 169, 0.6));
         }
 
         .code {
-          background: rgba(47, 181, 255, 1);
+          background: radial-gradient(circle at bottom left, rgba(0,0,0,0.8), rgba(6, 21, 255, 0.7));
           color: white;
         }
 
         .photo {
-          background: rgba(0, 255, 109, 1);
+          background: radial-gradient(circle at bottom right, rgba(0,0,0,0.8), rgba(0, 255, 38, 0.7));
         }
 
         .about {
-          background: rgba(142, 139, 144, 1);
+          background: radial-gradient(circle at bottom left, rgba(0,0,0,0.8), rgba(255, 247, 0, 0.7));
         }
       }
       .heading {
@@ -144,6 +144,7 @@ html {
           justify-content: left;
           align-items: center;
           padding-left: 20vw;
+          width: 100vw;
           color: white;
           font-size: 45px;
           background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('https://i2.wp.com/ksusentinel.com/wp-content/uploads/2016/02/20445410520_97a11633c7_o.jpg?w=4000');
@@ -156,13 +157,13 @@ html {
     .courses {
       height: 400vh;
       .title {
-        background: rgb(12,12,44);
+        background: radial-gradient(circle at bottom left, rgba(0,0,0,0.8), rgba(255, 247, 0, 0.7));
       }
     }
     .projects {
       height: 300vh;
       .title {
-        background: rgb(44,44,44);
+        background: radial-gradient(circle at top left, rgba(0,0,0,0.8), rgba(255, 247, 0, 0.7));
       }
     }
     .container{
@@ -179,7 +180,7 @@ html {
         margin: 0!important;
         z-index: -10;
 
-        h2 {
+        h1 {
           writing-mode: vertical-rl;
           text-orientation: upright;
           color: white;
@@ -203,18 +204,23 @@ html {
             line-height: 30px;
           }
 
+          a {
+            color: white;
+            text-decoration: none;
+          }
+
         }
         div:nth-child(1) {
-          background-color: rgb(56,134,89);
+          background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(169, 169, 169, 0.6));
         }
         div:nth-child(2) {
-          background-color: rgb(129,42,110);
+          background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(169, 169, 169, 0.6));
         }
         div:nth-child(3) {
-          background-color: rgb(31,88,107);
+          background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(169, 169, 169, 0.6));
         }
         div:nth-child(4) {
-          background-color: rgb(44,44,107);
+          background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(169, 169, 169, 0.6));
         }
       }
     }
@@ -224,8 +230,13 @@ html {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      background-color: #0affa5;
+      background: radial-gradient(circle at bottom right, rgba(0,0,0,1), rgba(169, 169, 169, 1));
       font-size: 30px;
+
+      .copy {
+        color: white;
+        font-size: 30px;
+      }
     }
   }
 }
@@ -250,7 +261,7 @@ html {
         .title {
           width: 50%;
           flex-grow: 1;
-          h2 {
+          h1 {
             writing-mode: unset;
           }
         }
@@ -258,6 +269,10 @@ html {
         .pages {
           width: 50%;
           flex-grow: 1;
+
+          h2 {
+            font-size: 2em;
+          }
         }
       }
     }

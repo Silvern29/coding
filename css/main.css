@@ -110,17 +110,17 @@ html body header nav .panel:hover {
   -moz-backface-visibility: hidden;
 }
 html body header nav .home {
-  background: yellow;
+  background: radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.8), rgba(169, 169, 169, 0.6));
 }
 html body header nav .code {
-  background: #2fb5ff;
+  background: radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.8), rgba(6, 21, 255, 0.7));
   color: white;
 }
 html body header nav .photo {
-  background: #00ff6d;
+  background: radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.8), rgba(0, 255, 38, 0.7));
 }
 html body header nav .about {
-  background: #8e8b90;
+  background: radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.8), rgba(255, 247, 0, 0.7));
 }
 html body header .heading h1 {
   height: 100vh;
@@ -128,6 +128,7 @@ html body header .heading h1 {
   justify-content: left;
   align-items: center;
   padding-left: 20vw;
+  width: 100vw;
   color: white;
   font-size: 45px;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url("https://i2.wp.com/ksusentinel.com/wp-content/uploads/2016/02/20445410520_97a11633c7_o.jpg?w=4000");
@@ -139,13 +140,13 @@ html body .courses {
   height: 400vh;
 }
 html body .courses .title {
-  background: #0c0c2c;
+  background: radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.8), rgba(255, 247, 0, 0.7));
 }
 html body .projects {
   height: 300vh;
 }
 html body .projects .title {
-  background: #2c2c2c;
+  background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.8), rgba(255, 247, 0, 0.7));
 }
 html body .container {
   display: flex;
@@ -161,7 +162,7 @@ html body .container .title {
   margin: 0 !important;
   z-index: -10;
 }
-html body .container .title h2 {
+html body .container .title h1 {
   writing-mode: vertical-rl;
   text-orientation: upright;
   color: white;
@@ -182,24 +183,32 @@ html body .container .pages div p {
   font-size: 18px;
   line-height: 30px;
 }
+html body .container .pages div a {
+  color: white;
+  text-decoration: none;
+}
 html body .container .pages div:nth-child(1) {
-  background-color: #388659;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(169, 169, 169, 0.6));
 }
 html body .container .pages div:nth-child(2) {
-  background-color: #812a6e;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(169, 169, 169, 0.6));
 }
 html body .container .pages div:nth-child(3) {
-  background-color: #1f586b;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(169, 169, 169, 0.6));
 }
 html body .container .pages div:nth-child(4) {
-  background-color: #2c2c6b;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(169, 169, 169, 0.6));
 }
 html body footer {
   height: 100vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #0affa5;
+  background: radial-gradient(circle at bottom right, black, darkgray);
+  font-size: 30px;
+}
+html body footer .copy {
+  color: white;
   font-size: 30px;
 }
 
@@ -215,12 +224,15 @@ html body footer {
     width: 50%;
     flex-grow: 1;
   }
-  html body .container .title h2 {
+  html body .container .title h1 {
     writing-mode: unset;
   }
   html body .container .pages {
     width: 50%;
     flex-grow: 1;
+  }
+  html body .container .pages h2 {
+    font-size: 2em;
   }
 }
 
