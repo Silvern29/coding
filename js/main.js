@@ -7,7 +7,7 @@ function splitScroll(){
     triggerHook: 0,
   })
     .setPin('#courses-pin')
-  .addIndicators()
+  // .addIndicators()
   .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -16,7 +16,7 @@ function splitScroll(){
     triggerHook: 0,
   })
     .setPin('#projects-pin')
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller);
 }
 

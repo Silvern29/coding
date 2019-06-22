@@ -50,18 +50,18 @@ html {
       font-family: 'Inika', sans-serif;
 
       nav {
-        position: fixed;
+        position: absolute;
         margin: auto;
-        height: 130px;
-        width: 650px;
+        height: 90px;
+        width: 360px;
         top: 1em;
-        right: 0;
+        right: 1em;
         left: 1em;
         z-index: 20;
 
         .panel {
           float: left;
-          height: 130px;
+          height: 90px;
           width: 90px;
           -webkit-transform-style: preserve-3d;
           -moz-transform-style: preserve-3d;
@@ -87,7 +87,7 @@ html {
             -ms-transform: rotateX(180deg);
             -o-transform: rotateX(180deg);
             transform: rotateX(180deg);
-            bottom: 130px;
+            bottom: 90px;
             text-align: center;
 
             a {
@@ -234,9 +234,14 @@ html {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+      flex-direction: column;
       background: radial-gradient(circle at bottom right, rgba(0,0,0,1), rgba(169, 169, 169, 1));
-      font-size: 30px;
+      font-size: 20px;
       color: white;
+
+      .address {
+        text-align: left;
+      }
 
       .copy {
         font-size: 1rem;
@@ -250,13 +255,22 @@ html {
     body {
       header {
         nav {
+          position: fixed;
+          width: 650px;
+          height: 130px;
           .panel {
             width: 130px;
+            height: 130px;
+            .back {
+              bottom: 130px;
+            }
           }
           .code {
             width: 260px;
+            height: 130px;
             font-size: 40px;
           }
+
         }
       }
 
@@ -278,6 +292,10 @@ html {
             font-size: 2em;
           }
         }
+      }
+
+      footer {
+        flex-direction: unset;
       }
     }
   }

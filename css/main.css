@@ -47,18 +47,18 @@ html body header {
   font-family: "Inika", sans-serif;
 }
 html body header nav {
-  position: fixed;
+  position: absolute;
   margin: auto;
-  height: 130px;
-  width: 650px;
+  height: 90px;
+  width: 360px;
   top: 1em;
-  right: 0;
+  right: 1em;
   left: 1em;
   z-index: 20;
 }
 html body header nav .panel {
   float: left;
-  height: 130px;
+  height: 90px;
   width: 90px;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -83,7 +83,7 @@ html body header nav .panel .back {
   -ms-transform: rotateX(180deg);
   -o-transform: rotateX(180deg);
   transform: rotateX(180deg);
-  bottom: 130px;
+  bottom: 90px;
   text-align: center;
 }
 html body header nav .panel .back a {
@@ -209,20 +209,34 @@ html body footer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-direction: column;
   background: radial-gradient(circle at bottom right, black, darkgray);
-  font-size: 30px;
+  font-size: 20px;
   color: white;
+}
+html body footer .address {
+  text-align: left;
 }
 html body footer .copy {
   font-size: 1rem;
 }
 
 @media only screen and (min-width: 840px) {
+  html body header nav {
+    position: fixed;
+    width: 650px;
+    height: 130px;
+  }
   html body header nav .panel {
     width: 130px;
+    height: 130px;
+  }
+  html body header nav .panel .back {
+    bottom: 130px;
   }
   html body header nav .code {
     width: 260px;
+    height: 130px;
     font-size: 40px;
   }
   html body .container .title {
@@ -238,6 +252,9 @@ html body footer .copy {
   }
   html body .container .pages h2 {
     font-size: 2em;
+  }
+  html body footer {
+    flex-direction: unset;
   }
 }
 
