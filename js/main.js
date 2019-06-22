@@ -20,4 +20,13 @@ function splitScroll(){
     .addTo(controller);
 }
 
-splitScroll();
+
+
+  window.onresize = function() {
+    var myUrl = window.location;
+    window.location.replace(myUrl)
+  }
+
+if (document.documentElement.clientWidth > 822) {
+  splitScroll();
+}

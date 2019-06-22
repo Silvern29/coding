@@ -66,15 +66,15 @@ html body header nav .panel {
   transform-style: preserve-3d;
 }
 html body header nav .panel .front, html body header nav .panel .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 html body header nav .panel .back {
   position: relative;
@@ -93,6 +93,9 @@ html body header nav .panel .back a {
   text-decoration: none;
   font-weight: 600;
 }
+html body header nav .panel .front {
+  transform: rotateX(0deg);
+}
 html body header nav .panel .front .fas {
   color: white;
   font-size: 60px;
@@ -108,7 +111,6 @@ html body header nav .panel:hover {
   -ms-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  -moz-backface-visibility: hidden;
 }
 html body header nav .home {
   background: radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.8), rgba(169, 169, 169, 0.6));
@@ -137,24 +139,38 @@ html body header .heading h1 {
   color: white;
   font-size: 45px;
 }
-html body .courses {
-  height: 400vh;
-}
 html body .courses .title {
-  background: radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.8), rgba(21, 98, 47, 0.7));
+  background: radial-gradient(circle at top right, rgba(0, 0, 0, 0.8), rgba(21, 98, 47, 0.7));
 }
-html body .projects {
-  height: 300vh;
+html body .courses .pages div:nth-child(1) {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(69, 204, 107, 0.7));
+}
+html body .courses .pages div:nth-child(2) {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(69, 204, 107, 0.7));
+}
+html body .courses .pages div:nth-child(3) {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(69, 204, 107, 0.7));
+}
+html body .courses .pages div:nth-child(4) {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(69, 204, 107, 0.7));
 }
 html body .projects .title {
-  background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.8), rgba(91, 42, 42, 0.7));
+  background: radial-gradient(circle at top right, rgba(0, 0, 0, 0.8), rgba(144, 136, 0, 0.7));
 }
-html body .container {
-  display: flex;
+html body .projects .pages div:nth-child(1) {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(225, 217, 0, 0.7));
+}
+html body .projects .pages div:nth-child(2) {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(225, 217, 0, 0.7));
+}
+html body .projects .pages div:nth-child(3) {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(225, 217, 0, 0.7));
+}
+html body .projects .pages div:nth-child(4) {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(225, 217, 0, 0.7));
 }
 html body .container .title {
-  width: 30%;
-  height: 100vh;
+  height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,21 +180,21 @@ html body .container .title {
   z-index: -1;
 }
 html body .container .title h1 {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
   color: white;
 }
 html body .container .pages {
-  width: 70%;
   margin: 0;
 }
 html body .container .pages div {
-  height: 100vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   color: white;
+}
+html body .container .pages div h2 {
+  text-align: center;
 }
 html body .container .pages div p {
   width: 80%;
@@ -189,23 +205,8 @@ html body .container .pages div a {
   color: white;
   text-decoration: none;
 }
-html body .container .pages div h2 {
-  text-align: center;
-}
-html body .container .pages div:nth-child(1) {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(169, 169, 169, 0.6));
-}
-html body .container .pages div:nth-child(2) {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(169, 169, 169, 0.6));
-}
-html body .container .pages div:nth-child(3) {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(169, 169, 169, 0.6));
-}
-html body .container .pages div:nth-child(4) {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(169, 169, 169, 0.6));
-}
 html body footer {
-  height: 100vh;
+  min-height: 50vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -239,9 +240,49 @@ html body footer .copy {
     height: 130px;
     font-size: 40px;
   }
+  html body .courses {
+    height: 400vh;
+  }
+  html body .courses .title {
+    background: radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.8), rgba(21, 98, 47, 0.7));
+  }
+  html body .courses .pages div:nth-child(1) {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(69, 204, 107, 0.7), rgba(0, 0, 0, 0.8));
+  }
+  html body .courses .pages div:nth-child(2) {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(69, 204, 107, 0.7), rgba(0, 0, 0, 0.8));
+  }
+  html body .courses .pages div:nth-child(3) {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(69, 204, 107, 0.7), rgba(0, 0, 0, 0.8));
+  }
+  html body .courses .pages div:nth-child(4) {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(69, 204, 107, 0.7), rgba(0, 0, 0, 0.8));
+  }
+  html body .projects {
+    height: 300vh;
+  }
+  html body .projects .title {
+    background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.8), rgba(21, 98, 47, 0.7));
+  }
+  html body .projects .pages div:nth-child(1) {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(69, 204, 107, 0.7), rgba(0, 0, 0, 0.8));
+  }
+  html body .projects .pages div:nth-child(2) {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(69, 204, 107, 0.7), rgba(0, 0, 0, 0.8));
+  }
+  html body .projects .pages div:nth-child(3) {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(69, 204, 107, 0.7), rgba(0, 0, 0, 0.8));
+  }
+  html body .projects .pages div:nth-child(4) {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(69, 204, 107, 0.7), rgba(0, 0, 0, 0.8));
+  }
+  html body .container {
+    display: flex;
+  }
   html body .container .title {
     width: 50%;
     flex-grow: 1;
+    height: 100vh;
   }
   html body .container .title h1 {
     writing-mode: unset;
@@ -250,11 +291,16 @@ html body footer .copy {
     width: 50%;
     flex-grow: 1;
   }
+  html body .container .pages div {
+    height: 100vh;
+  }
   html body .container .pages h2 {
     font-size: 2em;
   }
   html body footer {
     flex-direction: unset;
+    height: 100vh;
+    background: radial-gradient(circle at bottom, black, darkgray);
   }
 }
 
