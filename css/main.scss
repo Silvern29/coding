@@ -117,6 +117,13 @@ html {
         .code {
           background: radial-gradient(circle at bottom left, rgba(0,0,0,0.8), rgba(6, 21, 255, 0.7));
           color: white;
+          text-align: center;
+          font-size: 20px;
+          font-weight: 600;
+          text-transform: uppercase;
+          .fas{
+            font-size: 60px;
+          }
         }
         .photo {
           background: radial-gradient(circle at bottom right, rgba(0,0,0,0.8), rgba(0, 255, 38, 0.7));
