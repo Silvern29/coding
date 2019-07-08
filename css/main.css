@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Inika:400,700|Zilla+Slab:400,700&display=swap");
 /* latin */
+@import url("https://fonts.googleapis.com/css?family=Inika:400,700|Zilla+Slab:400,700&display=swap");
 @font-face {
   font-family: "Montserrat";
   font-style: italic;
@@ -281,8 +281,8 @@ html body footer .copy {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(69, 204, 107, 0.7), rgba(0, 0, 0, 0.8));
   }
   html body .projects {
-    height: 300vh;
-    height: calc(var(--vh, 1vh) * 300);
+    height: 400vh;
+    height: calc(var(--vh, 1vh) * 400);
   }
   html body .projects .title {
     background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.8), rgba(21, 98, 47, 0.7));

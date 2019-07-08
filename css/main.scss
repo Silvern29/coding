@@ -302,8 +302,8 @@ html {
         }
       }
       .projects {
-        height: 300vh;
-        height: calc(var(--vh, 1vh) * 300);
+        height: 400vh;
+        height: calc(var(--vh, 1vh) * 400);
 
         .title {
           background: radial-gradient(circle at top left, rgba(0,0,0,0.8), rgba(21, 98, 47, 0.7));

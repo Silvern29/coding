@@ -11,7 +11,7 @@ function splitScroll(){
   .addTo(controller);
 
   new ScrollMagic.Scene({
-    duration: '200%',
+    duration: '300%',
     triggerElement: '#projects-pin',
     triggerHook: 0,
   })
